@@ -20,6 +20,12 @@
     border-color: #bee5eb;
     color: #0c5460;
   }
+  main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+}
   </style>
 </head>
 <body>
@@ -45,6 +51,7 @@
     </div>
   </nav>
 
+  <main>
   <div class="container mt-5">
     <div class="row">
       <!-- Columna principal: Atender siguiente -->
@@ -54,7 +61,7 @@
           <p class="text-muted">Los pacientes se atienden por orden de prioridad (ALTA → MEDIA → BAJA)</p>
           <br>
           
-          <button id="btnAtender" class="btn btn-success btn-lg" style="width: 100%; max-width: 400px;">
+          <button id="btnAtender" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px;">
             <i class="bi bi-clipboard-check"></i> Atender Siguiente
           </button>
           
@@ -71,7 +78,7 @@
           <p class="text-muted">Último paciente atendido (Pila - LIFO)</p>
           <br>
           
-          <button id="btnUltimo" class="btn btn-info btn-lg" style="width: 100%; max-width: 400px;">
+          <button id="btnUltimo" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px;">
             <i class="bi bi-clock-history"></i> Ver Último Atendido
           </button>
           
@@ -83,20 +90,10 @@
     </div>
 
     <!-- Información de las estructuras de datos -->
-    <div class="row mt-5">
-      <div class="col-12">
-        <div class="alert alert-info">
-          <h5><strong>📚 Estructuras de datos utilizadas:</strong></h5>
-          <ul class="mb-0">
-            <li><strong>Cola de Prioridad:</strong> Las citas se organizan en tres colas (ALTA, MEDIA, BAJA). Se atienden primero las de prioridad ALTA.</li>
-            <li><strong>Pila (Stack):</strong> Cada paciente atendido se guarda en una pila. El último atendido es el primero que se puede consultar (LIFO).</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
+  </main>
 
-  <footer class="text-center p-3 bg-dark text-light mt-5">
+  <footer class="text-center p-3 bg-dark text-light">
     © 2025 Clínica Salud+ - Sistema de Gestión
   </footer>
 
